@@ -1,4 +1,4 @@
-#### INTRODUCTION ###
+#### INTRODUCTION ####
 
 # Welcome. For the description of the project please visit: https://github.com/diekei/2023_EBR_coastal_beetles_dispersal
 # Article is available at: 
