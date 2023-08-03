@@ -68,7 +68,7 @@ plot.surv <- ggsurvplot(curve.surv, pval = FALSE, conf.int = TRUE, conf.int.alph
 
 plot.surv
 
-ggsave(filename = "Plots/plot_survival_2.2.png", 
+ggsave(filename = "Figure_3.png", 
        width = 5, height = 5, device='png', dpi=1200)
 
 plot.surv$plot + theme_bw() + 
