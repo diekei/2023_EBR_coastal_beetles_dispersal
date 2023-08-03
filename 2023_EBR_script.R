@@ -1,16 +1,16 @@
-#### INTRODUCTION ####
+### INTRODUCTION #####
 
 # Welcome. For the description of the project please visit: https://github.com/diekei/2023_EBR_coastal_beetles_dispersal
 # Article is available at: 
 
 
-#### LIBRARY ####
+### LIBRARY #####
 
 library(survival)
 library(survminer)
 
 
-#### DATA ####
+### DATA #####
 
 # data available at 2023_EBR_data_survival
 # abbreviations explanation:
@@ -23,7 +23,7 @@ data.surv <- read.csv(file.choose())
 data.surv$sp <- as.factor(data.surv$sp)
 
 
-#### ANALYSIS - SURVIVAL CURVE ANALYSIS ####
+### ANALYSIS - SURVIVAL CURVE ANALYSIS #####
 
 curve.surv <- survfit(Surv(dur, stc) ~ sp, data = data.surv)
 
@@ -42,13 +42,13 @@ df.surv <- data.frame(time = curve.surv$time,
 head(df.surv)
 
 
-#### ANALYSIS - LOG-RANK TEST ####
+### ANALYSIS - LOG-RANK TEST #####
 
 diff.surv <- pairwise_survdiff(Surv(dur, stc) ~ sp, data = data.surv)
 diff.surv
 
 
-#### VISUALISATION ####
+### VISUALISATION #####
 
 plot.surv <- ggsurvplot(curve.surv, pval = FALSE, conf.int = TRUE, conf.int.alpha = 0.1,
                 risk.table = FALSE, size = 1.5, 
