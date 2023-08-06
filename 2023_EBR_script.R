@@ -8,6 +8,7 @@
 
 library(survival)
 library(survminer)
+library(colorblindcheck)
 
 
 ### DATA #####
@@ -49,6 +50,9 @@ diff.surv
 
 
 ### VISUALISATION #####
+
+coastal.beetles <- c('#FED439FF', '#709AE1FF', '#8A9197FF', '#D2AF81FF')
+palette_plot(coastal.beetles)
 
 plot.surv <- ggsurvplot(curve.surv, pval = FALSE, conf.int = TRUE, conf.int.alpha = 0.1,
                 risk.table = FALSE, size = 1.5, 
